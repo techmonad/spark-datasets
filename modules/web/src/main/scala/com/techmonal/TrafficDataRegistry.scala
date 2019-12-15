@@ -35,7 +35,7 @@ object TrafficDataRegistry {
         replyTo ! ActionPerformed(s"TrafficData ${trafficData.id} created.")
         registry(trafficDataSet + trafficData)
       case CreateTrafficDataSet(trafficDataInBulk, replyTo) =>
-        replyTo ! ActionPerformed(s"${trafficDataSet.size} : Number of TrafficData created.")
+        replyTo ! ActionPerformed(s"${trafficDataInBulk.size} : Number of TrafficData created.")
         registry(trafficDataSet ++ trafficDataInBulk.toSet)
       case GetTrafficData(id, replyTo) =>
         replyTo ! GetTrafficDataResponse(trafficDataSet.find(_.id == id))

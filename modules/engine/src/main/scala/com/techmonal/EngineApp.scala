@@ -15,12 +15,18 @@ object EngineApp {
     val fullDataFrame = loadDataFrame(spark, dataFile)
     val trafficDataset = toTrafficDataset(fullDataFrame)
 
-    trafficDataset.printSchema()
-    trafficDataset.show()
+    //val count = trafficDataset.count()
+    //val partition = Math.ceil(count / 200.0).toInt
 
-    trafficDataset.foreach { data =>
-      sendData(data)
-      println(data)
+    //println("Number of partitions : " + partition)
+
+    //val partitionDataSet = trafficDataset.repartition(partition)
+
+    trafficDataset.foreachPartition { dataItr: Iterator[TrafficData] =>
+      dataItr.grouped(500).foreach{ groupedItr =>
+        println("Data count : " + groupedItr.size)
+        sendData(groupedItr)
+      }
     }
 
     spark.stop()
@@ -47,19 +53,16 @@ object EngineApp {
     selectedDataFrame.as[TrafficData]
   }
 
-  def sendData: TrafficData => Unit = trafficData => {
+  def sendData: Seq[TrafficData] => Unit = trafficData => {
     import sttp.client._
     import sttp.client.sprayJson._
 
-    val request = basicRequest.post(uri"http://localhost:8080/traffic-details")
+    val request = basicRequest.post(uri"http://localhost:8080/traffic-details/bulk")
       .body(trafficData)
       .contentType("application/json")
 
     implicit val backend = HttpURLConnectionBackend()
     val response = request.send()
-
-    // response.header(...): Option[String]
-    println(response.header("Content-Length"))
 
     // response.body: by default read into an Either[String, String] to indicate failure or success
     println(response.body)
