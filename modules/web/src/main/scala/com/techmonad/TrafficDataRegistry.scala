@@ -1,11 +1,11 @@
-package com.techmonal
+package com.techmonad
 
 //#user-registry-actor
 
 import akka.actor.typed.ActorRef
 import akka.actor.typed.Behavior
 import akka.actor.typed.scaladsl.Behaviors
-import com.techmonal.domains.{ActionPerformed, TrafficData, TrafficDetails}
+import com.techmonad.domains.{ActionPerformed, TrafficData, TrafficDetails}
 
 object TrafficDataRegistry {
 

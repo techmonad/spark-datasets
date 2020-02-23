@@ -1,4 +1,4 @@
-package com.techmonal.domains
+package com.techmonad.domains
 
 import spray.json.DefaultJsonProtocol
 

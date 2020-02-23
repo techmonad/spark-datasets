@@ -1,4 +1,4 @@
-package com.techmonal
+package com.techmonad
 
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.adapter._

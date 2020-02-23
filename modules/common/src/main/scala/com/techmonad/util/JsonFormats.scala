@@ -1,6 +1,6 @@
-package com.techmonal.util
+package com.techmonad.util
 
-import com.techmonal.domains.{ActionPerformed, TrafficDetails}
+import com.techmonad.domains.{ActionPerformed, TrafficDetails}
 import spray.json.DefaultJsonProtocol
 
 object JsonFormats {

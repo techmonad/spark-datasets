@@ -1,4 +1,4 @@
-package com.techmonal
+package com.techmonad
 
 import akka.actor.testkit.typed.scaladsl.ActorTestKit
 import akka.http.scaladsl.marshalling.Marshal
@@ -7,7 +7,7 @@ import akka.http.scaladsl.testkit.ScalatestRouteTest
 import org.scalatest.concurrent.ScalaFutures
 import org.scalatest.{Matchers, WordSpec}
 import akka.actor.typed.scaladsl.adapter._
-import com.techmonal.domains.TrafficData
+import com.techmonad.domains.TrafficData
 
 class TrafficDataRoutesSpec extends WordSpec with Matchers with ScalaFutures with ScalatestRouteTest {
 
