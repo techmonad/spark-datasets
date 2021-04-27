@@ -1,5 +1,5 @@
-lazy val akkaHttpVersion = "10.1.14"
-lazy val akkaVersion = "2.6.0"
+lazy val akkaHttpVersion = "10.1.10"
+lazy val akkaVersion = "2.6.14"
 
 // -------------------------------------------------------------------------------------------------------------------
 // Root Project
@@ -39,10 +39,10 @@ lazy val engine = project.in(file("modules/engine"))
   .settings(libraryDependencies ++= sparkLibraryDependencies)
 
 lazy val commonLibraryDependencies = Seq(
-  "com.softwaremill.sttp.client" %% "spray-json" % "2.0.0-RC5",
+  "com.softwaremill.sttp.client" %% "spray-json" % "2.0.9",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
 
-  "org.scalatest" %% "scalatest" % "3.0.8" % Test
+  "org.scalatest" %% "scalatest" % "3.0.9" % Test
 )
 
 lazy val akkaLibraryDependencies = Seq(
@@ -56,7 +56,7 @@ lazy val akkaLibraryDependencies = Seq(
 )
 
 lazy val sparkLibraryDependencies = Seq(
-  "org.apache.spark" %% "spark-sql" % "2.4.4",
+  "org.apache.spark" %% "spark-sql" % "2.4.7",
   //"com.softwaremill.sttp.client" %% "core" % "2.0.0-RC5",
   //"com.softwaremill.sttp.client" %% "spray-json" % "2.0.0-RC5",
   //"com.softwaremill.sttp.client" %% "play-json" % "2.0.0-RC5"
