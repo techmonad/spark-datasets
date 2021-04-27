@@ -5,11 +5,12 @@ import akka.http.scaladsl.marshalling.Marshal
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.testkit.ScalatestRouteTest
 import org.scalatest.concurrent.ScalaFutures
-import org.scalatest.{Matchers, WordSpec}
 import akka.actor.typed.scaladsl.adapter._
 import com.techmonad.domains.TrafficData
+import org.scalatest.matchers.should.Matchers
+import org.scalatest.wordspec.AnyWordSpec
 
-class TrafficDataRoutesSpec extends WordSpec with Matchers with ScalaFutures with ScalatestRouteTest {
+class TrafficDataRoutesSpec extends AnyWordSpec with Matchers with ScalaFutures with ScalatestRouteTest {
 
   // the Akka HTTP route testkit does not yet support a typed actor system (https://github.com/akka/akka-http/issues/2036)
   // so we have to adapt for now
