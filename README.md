@@ -1,4 +1,5 @@
-# spark-datasets
+# spark-datasets [![Scala CI](https://github.com/techmonad/spark-datasets/actions/workflows/scala.yml/badge.svg)](https://github.com/techmonad/spark-datasets/actions/workflows/scala.yml)
+
 This example give a quick overview of the Spark DataFrame API.
 
 ### Build & Run
