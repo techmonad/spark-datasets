@@ -57,7 +57,7 @@ lazy val akkaLibraryDependencies = Seq(
 )
 
 lazy val sparkLibraryDependencies = Seq(
-  "org.apache.spark" %% "spark-sql" % "3.1.1",
+  "org.apache.spark" %% "spark-sql" % "3.2.0",
   //"com.softwaremill.sttp.client" %% "core" % "2.0.0-RC5",
   //"com.softwaremill.sttp.client" %% "spray-json" % "2.0.0-RC5",
   //"com.softwaremill.sttp.client" %% "play-json" % "2.0.0-RC5"
