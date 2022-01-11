@@ -9,7 +9,7 @@ lazy val root = (project in file("."))
   .settings(
     inThisBuild(List(
       organization := "com.techmonal",
-      scalaVersion := "2.13.5"
+      scalaVersion := "2.13.8"
     )),
     name := "spark-datasets"
   )
