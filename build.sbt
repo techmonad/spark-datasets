@@ -40,7 +40,7 @@ lazy val engine = project.in(file("modules/engine"))
   .settings(libraryDependencies ++= sparkLibraryDependencies)
 
 lazy val commonLibraryDependencies = Seq(
-  "com.softwaremill.sttp.client" %% "spray-json" % "2.2.9",
+  "com.softwaremill.sttp.client" %% "spray-json" % "2.3.0",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
 
   "org.scalatest" %% "scalatest" % "3.2.9" % Test
