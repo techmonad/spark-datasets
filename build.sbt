@@ -43,7 +43,7 @@ lazy val commonLibraryDependencies = Seq(
   "com.softwaremill.sttp.client" %% "spray-json" % "2.2.9",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
 
-  "org.scalatest" %% "scalatest" % "3.2.9" % Test
+  "org.scalatest" %% "scalatest" % "3.2.11" % Test
 )
 
 lazy val akkaLibraryDependencies = Seq(
