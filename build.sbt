@@ -41,7 +41,7 @@ lazy val engine = project.in(file("modules/engine"))
 
 lazy val commonLibraryDependencies = Seq(
   "com.softwaremill.sttp.client" %% "spray-json" % "2.2.9",
-  "ch.qos.logback" % "logback-classic" % "1.2.3",
+  "ch.qos.logback" % "logback-classic" % "1.2.11",
 
   "org.scalatest" %% "scalatest" % "3.2.9" % Test
 )
